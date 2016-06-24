@@ -72,8 +72,8 @@ tbl.src_bigquery <- function(src, from, ...) {
 copy_to.src_bigquery <- function(dest, df, name = deparse(substitute(df)),
                                  create_disposition = "CREATE_IF_NEEDED",
                                  write_disposition = "WRITE_APPEND") {
-  job <- insert_upload_job(dest$con$project, dest$con$dataset, name, df,
-    billing = dest$con$billing, create_disposition, write_disposition)
+  job <- insert_upload_job(dest$con@project, dest$con@dataset, name, df,
+    billing = dest$con@billing, create_disposition, write_disposition)
 
   wait_for(job)
 
