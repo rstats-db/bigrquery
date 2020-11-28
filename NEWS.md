@@ -1,5 +1,11 @@
 # bigrquery (development version)
 
+
+* `dbConnect` triggers connectionObserver in RStudio which makes BigQuery projects, datasets
+  and tables available in Connections pane (@byapparov, #298).
+
+* Error messages inlude hints for common problems (@deflaux, #353).
+
 # bigrquery 1.3.2
 
 * BigQuery `BYTES` and `GEOGRAPHY` column types are now supported via
@@ -55,6 +61,7 @@
 * Error messages inlude hints for common problems (@deflaux, #353).
 
 # bigrquery 1.2.0
+
 
 ## Auth from gargle
 

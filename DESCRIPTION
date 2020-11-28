@@ -88,4 +88,5 @@ Collate:
     'old-table.R'
     'old-tabledata.R'
     'utils.R'
+    'viewer.R'
     'zzz.R'
