@@ -1,6 +1,9 @@
 # bigrquery (development version)
 
+* `bq_stream()` allows streaming data into BigQuery table (@byapparov, #383)
+
 * Add `billing` slot to `BigQueryResult`.
+
 
 # bigrquery 1.3.2
 
