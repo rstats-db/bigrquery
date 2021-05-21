@@ -1,6 +1,8 @@
 # bigrquery (development version)
 
 * Add `billing` slot to `BigQueryResult`.
+* Add `BigQueryStorage` support. Use function `bqs_table_download` or
+  set `bqs` to `TRUE` when using DBI methods.
 
 * Improve int64 support when reading BigQuery tables with dplyr syntax. `collect()` now utilizes `bigint` parameter in `DBI::dbConnect()` object. Set `bigint` in connection object to `"integer64"` or `"character"` to avoid integer coercion and overflow issues (@zoews, #439, #437).
 
