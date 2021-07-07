@@ -1,11 +1,13 @@
 #' @include dbi-connection.R
 NULL
 
-BigQueryResult <- function(conn, sql, ...) {
+BigQueryResult <- function(conn, sql, params = NULL, ...) {
+
   if (is.null(conn@dataset)) {
     job <- bq_perform_query(sql,
       billing = conn@billing,
       quiet = conn@quiet,
+      parameters = params,
       ...
     )
   } else {
@@ -14,6 +16,7 @@ BigQueryResult <- function(conn, sql, ...) {
       billing = conn@billing,
       default_dataset = ds,
       quiet = conn@quiet,
+      parameters = params,
       ...
     )
   }
